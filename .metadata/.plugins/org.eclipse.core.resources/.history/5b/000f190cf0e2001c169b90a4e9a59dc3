@@ -1,0 +1,21 @@
+package com.kcsitglobal.entity;
+
+import java.util.Set;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.ManyToMany;
+
+@Entity
+public class User {
+
+	private String userName;
+	private String userFirstName;
+	private String userLastName;
+	private String userPassword;
+
+	@ManyToMany(fetch= FetchType.EAGER,cascade= CascadeType.ALL)
+	private Set<Role> role;
+
+}

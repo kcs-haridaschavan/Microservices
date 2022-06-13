@@ -1,0 +1,86 @@
+package com.kcsitglobal.service;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
+
+
+import com.kcsitglobal.models.Student;
+import com.kcsitglobal.rep.StudentRepository;
+
+@Service
+public class StudentService {
+
+	private final Logger logger = LoggerFactory.getLogger(this.getClass());
+	@Autowired
+	StudentRepository studentRepository;
+
+	public Object getStudents() {
+
+		return studentRepository.findAll();
+	}
+
+	public Student addStudent(Student student) {
+		logger.info(student.toString());
+
+		logger.info("student Addded Sucessfully");
+		return studentRepository.save(student);
+
+	}
+
+	public Object getStudentById(int id) {
+		return studentRepository.findById(id);
+	}
+
+	public Object getStudentByName(String name) {
+		return studentRepository.findByName(name);
+	}
+
+	public Object getStudentByCity(String city) {
+		return studentRepository.findByCity(city);
+	}
+
+	public Object getStudentByCollege(String college) {
+		return studentRepository.findByCollege(college);
+	}
+
+	public Student updateStudent(Student student) {
+		/*
+		 * JsonObject response = new JsonObject(); System.out.println("Request Student:"
+		 * + student); int id = student.getId(); try { Student stud =
+		 * studentRepository.getOne(id); System.out.println("Request Student:" + stud);
+		 * System.out.println("Old Student:" + stud); stud.setCity(student.getCity());
+		 * System.out.println("New Customer:" + stud); studentRepository.save(stud);
+		 * 
+		 * } catch (Exception e) { logger.info(e.getMessage());
+		 * response.addProperty("statusCode", 404); response.addProperty("statusCode",
+		 * e.getMessage()); return new ResponseEntity<>(response.toString(),
+		 * HttpStatus.NOT_FOUND);
+		 * 
+		 * } logger.info("Student Updated Sucessfully"); return new
+		 * ResponseEntity<>("Student Updated Sucessfully", HttpStatus.OK);
+		 */
+		return studentRepository.save(student);
+
+	}
+
+	public Object deleteStudent(int id) {
+		try {
+			studentRepository.deleteById(id);
+		} catch (Exception e) {
+			logger.error(e.getMessage());
+			return new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_FOUND);
+		}
+		logger.info("student Deleted Sucesfully");
+		return new ResponseEntity<>("Student Deleted sucessfully", HttpStatus.OK);
+
+	}
+
+	public Student updateStudentByID(int id) {
+		return studentRepository.findById(id).get();
+
+	}
+}

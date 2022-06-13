@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.kcsitglobal.controller.MyController&apos; to &apos;StudentController&apos;&#x0D;&#x0A;- Original project: &apos;mongodb&apos;&#x0D;&#x0A;- Original element: &apos;com.kcsitglobal.controller.MyController&apos;&#x0D;&#x0A;- Renamed element: &apos;com.kcsitglobal.controller.StudentController&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;MyController&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.kcsitglobal.controller{MyController.java[MyController" matchStrategy="1" name="StudentController" qualified="false" references="true" similarDeclarations="false" stamp="1652867037375" textual="false" version="1.0"/>
+</session>

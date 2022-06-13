@@ -1,0 +1,7 @@
+package com.kcsitglobal.service;
+
+import org.springframework.security.core.userdetails.UserDetailsService;
+
+public class JwtService implements UserDetailsService {
+
+}

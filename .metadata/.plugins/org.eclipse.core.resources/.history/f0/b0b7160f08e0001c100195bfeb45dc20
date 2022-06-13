@@ -1,0 +1,5 @@
+package com.kcsitglobal.entity;
+
+public class ProductReport {
+
+}

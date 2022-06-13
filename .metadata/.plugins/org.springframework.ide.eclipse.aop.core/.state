@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="bookMyshow-webclient"/>
+<aop-project name="department-service"/>
+<aop-project name="mongo-auto-sequence-example"/>
+<aop-project name="user-service"/>
+<aop-project name="Billing"/>
+<aop-project name="Product-service"/>
+<aop-project name="mongodb"/>
+<aop-project name="apigateway"/>
+<aop-project name="cloud-config-server"/>
+<aop-project name="ServiceB"/>
+<aop-project name="springboot-crud-k8s-example"/>
+<aop-project name="RestTemplate"/>
+<aop-project name="bookMyshow"/>
+<aop-project name="spring-cloud-feign"/>
+<aop-project name="contact"/>
+<aop-project name="discovery_service"/>
+<aop-project name="ServiceA"/>
+<aop-project name="hystrix-dashboard"/>
+<aop-project name="com.self.sprintboot.learning.employee"/>
+<aop-project name="customer"/>
+<aop-project name="com-self-sprintboot-learning-eureka"/>
+<aop-project name="authentication"/>
+<aop-project name="springboot-k8s-demo"/>
+<aop-project name="purchase"/>
+<aop-project name="Account-Service"/>
+<aop-project name="cloud-gateway"/>
+<aop-project name="com-self-sprintboot-learning-apigateway"/>
+<aop-project name="report-service"/>
+</aop-reference-model>

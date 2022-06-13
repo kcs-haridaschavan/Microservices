@@ -1,0 +1,16 @@
+package com.kcsitglobal.controller;
+
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.kcsitglobal.entity.Role;
+
+@RestController
+public class RoleController {
+
+	@PostMapping({ "/createNewRole" })
+	public Role createNewRole(Role role) {
+
+	}
+
+}

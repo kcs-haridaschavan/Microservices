@@ -1,0 +1,15 @@
+package com.kcsitglobal.client;
+
+import java.util.List;
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.kcsitglobal.entity.ProductReport;
+
+@FeignClient(name="Product-service")
+public interface ProductServiceClient {
+	
+@GetMapping("api/products")
+	List<ProductReport> getAllProductReport();
+

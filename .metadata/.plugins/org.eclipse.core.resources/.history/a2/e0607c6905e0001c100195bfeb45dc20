@@ -1,0 +1,18 @@
+
+server:
+  port: 9094
+spring:
+  application:
+    name: ACCOUNT-SERVICE
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: Hari@7777
+    url: jdbc:mysql://localhost:3306/Customers
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+    show-sql: true

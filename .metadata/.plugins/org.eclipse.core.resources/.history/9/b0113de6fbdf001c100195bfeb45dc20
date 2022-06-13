@@ -1,0 +1,5 @@
+package com.kcsitglobal.client;
+
+public interface AccountServiceClient {
+
+}

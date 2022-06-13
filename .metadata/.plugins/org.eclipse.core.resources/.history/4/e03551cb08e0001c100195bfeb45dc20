@@ -1,0 +1,11 @@
+package com.kcsitglobal.client;
+
+import java.util.List;
+
+import com.kcsitglobal.entity.ProductReport;
+
+public interface ProductServiceClient {
+
+	List<ProductReport> getAllProductReport();
+
+}

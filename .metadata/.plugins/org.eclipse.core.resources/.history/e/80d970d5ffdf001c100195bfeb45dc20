@@ -1,0 +1,15 @@
+server:
+  port: 9094
+  
+  spring:
+    application:
+    name: report-service
+    
+    spring:
+  cloud:
+    loadbalancer:
+       ribbon:
+        enable: false
+
+# And... inform the "url" attribute at FeignClient
+ @FeignClient(name = "student", url = "student") 

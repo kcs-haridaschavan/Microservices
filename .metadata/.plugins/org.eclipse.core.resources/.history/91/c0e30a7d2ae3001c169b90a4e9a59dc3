@@ -1,0 +1,36 @@
+package com.kcsitglobal.util;
+
+import java.util.function.Function;
+
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.stereotype.Component;
+
+import io.jsonwebtoken.ClaimJwtException;
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.Jwts;
+
+@Component
+public class JwtUtil {
+	private static final String SECRET_KEY = "KCSITGLOBAL";
+
+	public String getUsernameFromToken(String token) {
+        return getClaimFromToken(token, Claims::getSubject);
+    }
+
+	
+
+	private <T> T getClaimFromToken(String token,Function<Claims,T>claimResolver) {
+		final Claims claims=getClaimFromToken(token);
+		return claimReslover.apply(claims);
+		
+	}
+
+	private Claims getAllClaimsFromToken(String token) {
+		return Jwts.parser().setSigningKey(SECRET_KEY).parseClaimsJws(token).getBody();
+
+	}
+	public boolean validateToken(String token,UserDetails userDetails) {
+		
+	}
+
+}

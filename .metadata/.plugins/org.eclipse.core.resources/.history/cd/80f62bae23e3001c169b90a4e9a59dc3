@@ -1,0 +1,15 @@
+package com.kcsitglobal.util;
+
+import java.util.function.Function;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class JwtUtil {
+	
+	public String getUserNameFromToken(String token) {
+	
+	}
+	private <T> T getClaimFromToken(String token,Function<T, R>)
+
+}

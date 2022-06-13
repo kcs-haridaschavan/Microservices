@@ -1,0 +1,11 @@
+package com.kcsitglobal.client;
+
+import java.util.List;
+
+import com.kcsitglobal.entity.CustomerReport;
+
+public interface AccountServiceClient {
+
+	List<CustomerReport> getAllCustomerReport();
+
+}

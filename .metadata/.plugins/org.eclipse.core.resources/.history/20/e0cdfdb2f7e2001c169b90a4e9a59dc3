@@ -1,0 +1,32 @@
+package com.kcsitglobal.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.kcsitglobal.entity.Role;
+import com.kcsitglobal.entity.User;
+import com.kcsitglobal.repository.RoleRepository;
+import com.kcsitglobal.repository.UserRepository;
+
+@Service
+public class UserService {
+
+	@Autowired
+	private UserRepository userRepository;
+	
+	@Autowired 
+	private RoleRepository roleRepository;
+
+	public User registerNewUser(User user) {
+		return userRepository.save(user);
+
+	}
+
+	public void initRolesAndUser() {
+		Role adminRole= new Role();
+		adminRole.setRoleName("Admin");
+		adminRole.setRoleDescription("Admin Role");
+
+	}
+
+}

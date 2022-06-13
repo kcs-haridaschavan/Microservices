@@ -1,0 +1,5 @@
+package com.kcsitglobal.model;
+
+public class User {
+
+}

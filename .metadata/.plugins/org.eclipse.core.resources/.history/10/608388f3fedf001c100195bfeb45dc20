@@ -1,0 +1,15 @@
+package com.kcsitglobal.client;
+
+import java.util.List;
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.kcsitglobal.entity.CustomerReport;
+
+@FeignClient(name="Account-Service")
+public interface AccountServiceClient {
+@GetMapping("/api/customers")
+	List<CustomerReport> getAllCustomerReport();
+
+}
